@@ -1,0 +1,79 @@
+<p>
+    Welcome, Evaluator !!!
+  </p>
+  
+  <h2>Evaluate Quiz !!!</h2>
+
+
+<mat-grid-list cols="1" rowHeight="480">
+
+    <mat-grid-tile>
+
+<mat-list>
+    <mat-list-item>
+      1. Sample Question of Quiz
+    </mat-list-item>
+      
+  
+
+    <mat-list-item>
+      <mat-radio-group aria-label="Select an option" >
+          <mat-radio-button value="1" [disabled]="true" [checked]="q1Yes">Yes</mat-radio-button>
+          <mat-radio-button value="2" [disabled]="true" [checked]="q1No">No</mat-radio-button>
+        </mat-radio-group>
+    </mat-list-item>
+    <mat-list-item>
+        <mat-slide-toggle (change)="sendAnswer('q1Correct')">Answer</mat-slide-toggle>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    
+    <mat-list-item>
+        2. Sample Question of Quiz
+      </mat-list-item>
+        
+      <mat-list-item>
+        <mat-radio-group aria-label="Select an option" >
+            <mat-radio-button value="1" [disabled]="true" [checked]="q2Yes">Yes</mat-radio-button>
+            <mat-radio-button value="2" [disabled]="true" [checked]="q2No">No</mat-radio-button>
+          </mat-radio-group>
+      </mat-list-item>
+      <mat-list-item>
+          <mat-slide-toggle (change)="sendAnswer('q2Correct')">Answer</mat-slide-toggle>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+          3. Sample Question of Quiz
+        </mat-list-item>
+          
+        <mat-list-item>
+          <mat-radio-group aria-label="Select an option" >
+              <mat-radio-button value="1" [disabled]="true" [checked]="q3Yes">Yes</mat-radio-button>
+              <mat-radio-button value="2" [disabled]="true" [checked]="q3No">No</mat-radio-button>
+            </mat-radio-group>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-slide-toggle (change)="sendAnswer('q3Correct')">Answer</mat-slide-toggle>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+   
+            <textarea  id="input" type="text" #input></textarea>
+            <button type="button" (click)="sendMessage(input.value)"> Send Feed Back</button>
+        
+        </mat-list-item>
+  </mat-list>
+
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <!-- <button mat-raised-button color="warn">Submit Evaluation Results</button>
+    -->
+
+</mat-grid-tile>
+
+
+
+</mat-grid-list>
+

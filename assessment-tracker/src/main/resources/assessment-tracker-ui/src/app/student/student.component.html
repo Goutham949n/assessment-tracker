@@ -1,0 +1,70 @@
+<p>
+    Welcome, Student !!!
+  </p>
+  
+<h2>Take Quiz !!!</h2>
+
+<mat-grid-list cols="1" rowHeight="450">
+
+    <mat-grid-tile>
+
+<mat-list>
+  
+    <mat-list-item>
+      1. Sample Question of Quiz
+    </mat-list-item>
+      
+    <mat-list-item>
+      <mat-radio-group aria-label="Select an option" >
+          <mat-radio-button value="1" (click)="sendMessage('q1Yes')">Yes</mat-radio-button>
+          <mat-radio-button value="2" (click)="sendMessage('q1No')">No</mat-radio-button>
+        </mat-radio-group>
+    </mat-list-item>
+    <mat-list-item>
+        {{q1Ans}}
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    
+    <mat-list-item>
+        2. Sample Question of Quiz
+      </mat-list-item>
+        
+      <mat-list-item>
+        <mat-radio-group aria-label="Select an option" >
+            <mat-radio-button value="1" (click)="sendMessage('q2Yes')">Yes</mat-radio-button>
+            <mat-radio-button value="2" (click)="sendMessage('q2No')">No</mat-radio-button>
+          </mat-radio-group>
+      </mat-list-item>
+      <mat-list-item>
+          {{q2Ans}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+          3. Sample Question of Quiz
+        </mat-list-item>
+          
+        <mat-list-item>
+          <mat-radio-group aria-label="Select an option" >
+              <mat-radio-button value="1" (click)="sendMessage('q3Yes')">Yes</mat-radio-button>
+          <mat-radio-button value="2"  (click)="sendMessage('q3No')">No</mat-radio-button>
+            </mat-radio-group>
+        </mat-list-item>
+        <mat-list-item>
+            {{q3Ans}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+  </mat-list>
+
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <!-- <button mat-raised-button color="primary">Submit Answers</button> -->
+  <div class="chat">
+    <div><h2>Messages:</h2></div>
+    <hr/>
+    <div class="message"></div>
+  </div>
+</mat-grid-tile>
+
+</mat-grid-list>
